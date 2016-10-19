@@ -1,4 +1,4 @@
-﻿# **Legal assembly exercising system** #
+﻿# **Knowledge-Based Legal Document Assembly** #
 This project is developed as a proof of concept for research on legal document assembling. It should present law students complete assembly process with dependencies of law regulations and case facts on final outcome. As a learning system, it should also provide explanations and legal sources related to particular assembly step.
 
 Currently, it supports legal documents such as indictments and motions to indict but, properly configured, it could support another types of legal documents as well. 
