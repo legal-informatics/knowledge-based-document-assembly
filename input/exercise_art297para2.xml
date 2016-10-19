@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Exercise rulebaseGoal="committed_art297para2" templateFilename="indictment_art297para2.tsl">
+	<RuleFacts>
+		<RuleFact name="defendant" type="string"/>
+		<RuleFact name="speed" type="int"/>
+		<RuleFact name="alcohol_level" type="float"/>
+		<RuleFact name="property_damage" type="float"/>
+		<RuleFact name="victim_injuries" type="enum(minor,grievous,death)"/>
+		<RuleFact name="unsafe_distance" type="boolean"/>
+		<RuleFact name="negligence" type="boolean"/>
+	</RuleFacts>
+	<TemplateFacts>
+		<TemplateFact name="defendant" type="string"/>
+		<TemplateFact name="defendant_residence_place" type="string"/>
+		<TemplateFact name="defendant_residence_address" type="string"/>
+		<TemplateFact name="defendant_birthdate" type="date"/>
+		<TemplateFact name="defendant_birthplace" type="string"/>
+		<TemplateFact name="defendant_father" type="string"/>
+		<TemplateFact name="defendant_mother" type="string"/>
+		<TemplateFact name="defendant_mother_birthdate" type="date"/>
+		<TemplateFact name="defendant_citizenship" type="string"/>
+		<TemplateFact name="defendant_family_circumstances" type="string"/>
+		<TemplateFact name="defendant_occupation" type="string"/>
+		<TemplateFact name="defendant_personal_id_number" type="string"/>
+		<TemplateFact name="accident_date" type="date"/>
+		<TemplateFact name="accident_time" type="time"/>
+		<TemplateFact name="accident_address" type="string"/>
+		<TemplateFact name="vehicle_brand" type="string"/>
+		<TemplateFact name="vehicle_model" type="string"/>
+		<TemplateFact name="vehicle_plates" type="string"/>
+		<TemplateFact name="direction_from_street" type="string"/>
+		<TemplateFact name="direction_to_street" type="string"/>
+		<TemplateFact name="speed" type="int"/>
+		<TemplateFact name="alcohol_level" type="float"/>
+		<TemplateFact name="property_damaged" type="string"/>
+		<TemplateFact name="property_damage" type="float"/>
+		<TemplateFact name="victim_injuries" type="string"/>
+	</TemplateFacts>
+	<Steps>
+		<Step ruleFact="defendant" templateFact="defendant" type="string" text="defendant's name"/>
+		<Step ruleFact="" templateFact="defendant_residence_place" answerType="string" text="defendant's residence place"/>
+		<Step ruleFact="" templateFact="defendant_residence_address" answerType="string" text="defendant's residence address"/>
+		<Step ruleFact="" templateFact="defendant_birthdate" answerType="date" text="defendant's birthdate"/>
+		<Step ruleFact="" templateFact="defendant_birthplace" answerType="string" text="defendant's birthplace"/>
+		<Step ruleFact="" templateFact="defendant_father" answerType="string" text="defendant's father"/>
+		<Step ruleFact="" templateFact="defendant_mother" answerType="string" text="defendant's mother"/>
+		<Step ruleFact="" templateFact="defendant_mother_birthdate" answerType="date" text="defendant's mother birthdate"/>
+		<Step ruleFact="" templateFact="defendant_citizenship" answerType="string" text="defendant's citizenship"/>
+		<Step ruleFact="" templateFact="defendant_family_circumstances" answerType="string" text="defendant's family circumstances (e.g. single, married, how many children, etc.)"/>
+		<Step ruleFact="" templateFact="defendant_occupation" answerType="string" text="defendant's occupation"/>
+		<Step ruleFact="" templateFact="defendant_personal_id_number" answerType="int" text="defendant's personal ID number"/>
+		<Step ruleFact="" templateFact="accident_date" type="date" text="accident date"/>
+		<Step ruleFact="" templateFact="accident_time" type="time" text="accident time"/>
+		<Step ruleFact="" templateFact="accident_place" type="string" text="accident place"/>
+		<Step ruleFact="" templateFact="accident_address" type="string" text="accident address"/>
+		<Step ruleFact="" templateFact="vehicle_brand" type="string" text="defendant's vehicle brand"/>
+		<Step ruleFact="" templateFact="vehicle_model" type="string" text="defendant's vehicle model"/>
+		<Step ruleFact="" templateFact="vehicle_plates" type="string" text="defendant's vehicle plates number"/>
+		<Step ruleFact="" templateFact="direction_from_street" type="string" text="defendant's direction (from street)"/>
+		<Step ruleFact="" templateFact="direction_to_street" type="string" text="defendant's direction (to street)"/>
+		<Step ruleFact="alcohol_level" templateFact="alcohol_level" type="float" text="defendant's alcohol level"/>
+		<Step ruleFact="speed" templateFact="speed" type="int" text="defendant's speed"/>
+		<Step ruleFact="property_damaged" templateFact="property_damage" type="string" text="Damaged property"/>
+		<Step ruleFact="property_damage" templateFact="property_damage" type="float" text="property damage value"/>
+		<Step ruleFact="victim_injuries" templateFact="victim_injuries" type="string" text="victim's body injuries [minor|grievous|death]"/>
+	</Steps>
+</Exercise>

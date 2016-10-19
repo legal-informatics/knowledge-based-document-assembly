@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Exercise rulebaseGoal="committed_art246" templateFilename="indictment_art246.tsl">
+	<RuleFacts>
+		<RuleFact name="defendant" type="string"/>
+		<RuleFact name="substance" type="string"/>
+		<RuleFact name="quantity" type="float"/>
+		<RuleFact name="activity" type="string"/>
+	</RuleFacts>
+	<TemplateFacts>
+		<TemplateFact name="defendant" type="string"/>
+		<TemplateFact name="defendant_father" type="string"/>
+		<TemplateFact name="defendant_mother" type="string"/>
+		<TemplateFact name="defendant_mother_birthdate" type="date"/>
+		<TemplateFact name="defendant_birthdate" type="date"/>
+		<TemplateFact name="defendant_birthplace" type="string"/>
+		<TemplateFact name="defendant_residence_place" type="string"/>
+		<TemplateFact name="defendant_residence_address" type="string"/>
+		<TemplateFact name="defendant_occupation" type="string"/>
+		<TemplateFact name="defendant_family_circumstances" type="string"/>
+		<TemplateFact name="defendant_military_service" type="string"/>
+		<TemplateFact name="defendant_citizenship" type="string"/>
+		<TemplateFact name="defendant_id_card_number" type="string"/>
+		<TemplateFact name="defendant_id_card_issuer" type="string"/>
+		<TemplateFact name="defendant_personal_id_number" type="string"/>
+		<TemplateFact name="offence_date" type="date"/>
+		<TemplateFact name="offence_time" type="time"/>
+		<TemplateFact name="offence_place" type="string"/>
+		<TemplateFact name="offence_address" type="string"/>
+		<TemplateFact name="substance" type="string"/>
+		<TemplateFact name="quantity" type="float"/>
+	</TemplateFacts>
+	<Steps>
+		<Step ruleFact="defendant" templateFact="defendant" answerType="string" text="defendant's name"/>
+		<Step ruleFact="substance" templateFact="substance" answerType="string" text="substance"/>
+		<Step ruleFact="quantity" templateFact="quantity" answerType="float" text="quantity (g)"/>
+		<Step ruleFact="activity" templateFact="activity" answerType="string" text="activity [produce|processes|possesses|sells|purchases|buying]"/>
+		<Step ruleFact="" templateFact="defendant_father" answerType="string" text="defendant's father"/>
+		<Step ruleFact="" templateFact="defendant_mother" answerType="string" text="defendant's mother"/>
+		<Step ruleFact="" templateFact="defendant_mother_birthdate" answerType="date" text="defendant's mother birthdate"/>
+		<Step ruleFact="" templateFact="defendant_birthdate" answerType="date" text="defendant's birthdate"/>
+		<Step ruleFact="" templateFact="defendant_birthplace" answerType="string" text="defendant's birthplace"/>
+		<Step ruleFact="" templateFact="defendant_residence_place" answerType="string" text="defendant's residence place"/>
+		<Step ruleFact="" templateFact="defendant_residence_address" answerType="string" text="defendant's residence address"/>
+		<Step ruleFact="" templateFact="defendant_occupation" answerType="string" text="defendant's occupation"/>
+		<Step ruleFact="" templateFact="defendant_family_circumstances" answerType="string" text="defendant's family circumstances (e.g. single, married, how many children, etc.)"/>
+		<Step ruleFact="" templateFact="defendant_military_service" answerType="string" text="defendant's military service status [completed|not completed]"/>
+		<Step ruleFact="" templateFact="defendant_citizenship" answerType="string" text="defendant's citizenship"/>
+		<Step ruleFact="" templateFact="defendant_id_card_number" answerType="int" text="defendant's ID card number"/>
+		<Step ruleFact="" templateFact="defendant_id_card_issuer" answerType="string" text="defendant's ID card issued by Police Administration (place)"/>
+		<Step ruleFact="" templateFact="defendant_personal_id_number" answerType="int" text="defendant's personal ID number"/>
+		<Step ruleFact="" templateFact="offence_date" answerType="date" text="offence date"/>
+		<Step ruleFact="" templateFact="offence_time" answerType="time" text="offence time"/>
+		<Step ruleFact="" templateFact="offence_place" answerType="string" text="offence place"/>
+		<Step ruleFact="" templateFact="offence_address" answerType="string" text="offence address"/>
+	</Steps>
+</Exercise>
