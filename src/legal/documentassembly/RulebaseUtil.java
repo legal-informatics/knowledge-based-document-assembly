@@ -15,6 +15,10 @@ import org.w3c.dom.NodeList;
 
 public class RulebaseUtil {
 
+	/**
+	 * Retrieves facts needed by the rulebase
+	 * @return all facts figuring in rulebase
+	 */
 	public static Map<String,String> retrieveFactsForRulebase() {
 		Map<String,String> facts = new HashMap<String,String>();
 		DocumentBuilderFactory domFactory = DocumentBuilderFactory.newInstance();
@@ -35,6 +39,10 @@ public class RulebaseUtil {
 		return facts;
 	}
 
+	/**
+	 * Retrieves possible goals in rulebase
+	 * @return names of goals i.e. conclusions
+	 */
 	public static ArrayList<String> retrieveGoals() {
 		ArrayList<String> goals = new ArrayList<String>();
 		DocumentBuilderFactory domFactory = DocumentBuilderFactory.newInstance();

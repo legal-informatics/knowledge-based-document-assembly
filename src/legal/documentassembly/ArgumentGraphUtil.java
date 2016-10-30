@@ -7,8 +7,15 @@ import javax.xml.transform.TransformerFactory;
 import javax.xml.transform.stream.StreamResult;
 import javax.xml.transform.stream.StreamSource;
 
+/**
+ * Utility class for building argument graph
+ *
+ */
 public class ArgumentGraphUtil {
 
+	/**
+	 * Transforms reasoning proof into argument graph
+	 */
 	public static void buildArgumentGraph() {
 		System.out.println("Generating argument graph...");
 		try {

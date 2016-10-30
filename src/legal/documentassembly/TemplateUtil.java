@@ -18,8 +18,16 @@ import toxgene.interfaces.ToXgeneReporter;
 import toxgene.interfaces.ToXgeneSession;
 import toxgene.util.ToXgeneReporterImpl;
 
+/**
+ * Utility class for operations with document template
+ *
+ */
 public class TemplateUtil {
 
+	/**
+	 * Executes building of final document
+	 * @param exercise Exercise object containing answers i.e. gathered facts
+	 */
 	public static void buildDocument(Exercise exercise) {
 		System.out.println("Exporting facts for document building...");
 		exportFacts(exercise);
@@ -43,6 +51,10 @@ public class TemplateUtil {
 		}
 	}
 	
+	/**
+	 * Prepares facts in XML format recognized by the template engine
+	 * @param exercise Exercise object containing answers i.e. gathered facts
+	 */
 	public static void exportFacts(Exercise exercise) {
 		String text = "<fact_list>\r\n";
 		for (Step question: exercise.getSteps())
@@ -59,6 +71,11 @@ public class TemplateUtil {
 		}
 	}
 
+	/**
+	 * Retrieves facts needed by the document template
+	 * @param templateFilename filename of the document template
+	 * @return retrieved fact names
+	 */
 	public static Map<String,String> retrieveFactsForTemplate(String templateFilename) {
 		HashMap<String,String> retVal = new HashMap<>();
 		try {
