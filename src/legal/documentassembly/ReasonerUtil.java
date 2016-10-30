@@ -24,9 +24,17 @@ import legal.documentassembly.bean.Step;
 
 import org.w3c.dom.Document;
 import org.w3c.dom.Node;
-
+/**
+ * Utility class for reasoning activities
+ *
+ */
 public class ReasonerUtil {
 
+	/**
+	 * Retrieval of reasoning conclusion
+	 * @param exercise Exercise object containing answers i.e. gathered facts
+	 * @return Reasoning result if conclusion is (positively/negatively) (defeasibly/definitely) proven
+	 */
 	public static String getConclusion(Exercise exercise) {
 		System.out.println("Exporting facts for reasoning...");
 		updateRdf(exercise);
@@ -40,6 +48,10 @@ public class ReasonerUtil {
 		return retrieveResult();
 	}
 	
+	/**
+	 * Exports facts to rdf file
+	 * @param exercise Exercise object containing answers i.e. gathered facts
+	 */
 	private static void updateRdf(Exercise exercise) {
 		try {
 			DocumentBuilderFactory docFactory = DocumentBuilderFactory.newInstance();
@@ -64,6 +76,10 @@ public class ReasonerUtil {
 		}
 	}
 	
+	/**
+	 * Sets conclusion to be tested by the reasoner
+	 * @param exercise Exercise object containing answers i.e. gathered facts
+	 */
 	private static void updateGoal(Exercise exercise) {
 		try {
 			DocumentBuilderFactory docFactory = DocumentBuilderFactory.newInstance();
@@ -81,6 +97,10 @@ public class ReasonerUtil {
 		}
 	}
 	
+	/**
+	 * Transforms rulebase into format recognized by the reasoner
+	 * @param exercise Exercise object containing answers i.e. gathered facts
+	 */
 	private static void buildRulebase(Exercise exercise) {
 		try {
 			TransformerFactory tFactory = TransformerFactory.newInstance("net.sf.saxon.TransformerFactoryImpl",null);
@@ -91,6 +111,10 @@ public class ReasonerUtil {
 		}
 	}
 	
+	/**
+	 * Executes reasoning
+	 * @return if execution was successful
+	 */
 	private static boolean startReasoner() {
 		try {
 			prepareClipsdos();
@@ -105,6 +129,10 @@ public class ReasonerUtil {
 		return false;
 	}
 
+	/**
+	 * Retrieves reasoning result
+	 * @return Reasoning result if conclusion is (positively/negatively) (defeasibly/definitely) proven
+	 */
 	private static String retrieveResult() {
 		String result = "";
 		DocumentBuilderFactory domFactory = DocumentBuilderFactory.newInstance();
@@ -121,7 +149,10 @@ public class ReasonerUtil {
 		return result;
 	}
 	
-	
+	/**
+	 * Places appropriate clipsdos interpreter (32 bit or 64 bit) for reasoner
+	 * @throws IOException
+	 */
 	public static void prepareClipsdos() throws IOException {
 		String inputFile = EnvironmentProperties.clipsdos32_filename;
 		if (System.getenv("ProgramFiles(x86)") != null) { // 64-bit OS
